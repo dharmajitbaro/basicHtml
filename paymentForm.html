@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment form</title>
+<style>
+*{ box-sizing: border-box;}
+body{font-family: Verdana, Geneva, Tahoma, sans-serif;
+margin: 15px 13px;font-size: 17px;padding: 8px;}
+.container{
+    background-color: rgba(189, 184, 184, 0.829);padding: 5px 20px 15px 20px;
+    border: 1px solid black;border-radius: 7px;
+    /* basically border radius is use to round the corner of the border  */
+}
+
+
+input[type="password"],input[type="date"],
+input[type="text"],
+input[type="radio"],
+input[type="email"],
+input[type="number"],
+textarea,select{width: 100%; padding: 12px;
+     border: 0px;border-radius: 10px;
+     margin: 10px;
+
+}
+fieldset{width: 100%; border:1px solid black;
+border-radius: 10px;background-color: rgb(255, 255, 255);}
+
+.main_heading{text-align: center;}
+
+input[type="submit"]{background-color:rgb(23, 117, 23) ;
+    color: rgb(255, 255, 255);border: 0px solid black;
+     border-radius: 5px;padding: 5px 10px;
+     cursor: pointer;width: 100%;
+/* we use this coursour if we move our 
+pointer towards the butoon then a hand will show
+and ther are alsso many property like zoom in .zooom out etc try it */
+}
+input[type="submit"]:hover{
+    background-color: rgba(56, 241, 56, 0.897);
+}
+</style>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+  
+    <form action="">
+        <h1 class="main_heading">payment form</h1>
+        <hr>
+        <h2>contect information</h2>
+        <p>required fields are followed by *</p>
+        <!--we write the name="name" then the user input will be go to the surver with the tag name
+        and required is use to make the option must -->
+        <p>Name: *<input type="text" name="name" required placeholder="your full name"></p>
+        <!-- so we write the place holder to giving hint 
+            in the box after writing in the box it will automatically disappear -->
+     
+        <fieldset>
+            <legend>gender</legend>
+            <p>
+                Male <input type="radio" name="gender" id="male">
+                <br>
+                female <input type="radio" name="gender" id="female">
+            </p>
+        </fieldset>
+
+        <p>Assress: <textarea name="address" id="address" cols="100" rows="4"></textarea></p>
+        <p>Email: *<input type="email" name="email" id="email" required></p>
+        <p>Pincode:*<input type="number" name="pincode" id="pincode" required></p>
+
+        <h2>payment information</h2>
+        <p>Card Type:*
+            <select name="card_type" id="card_type" required>
+                <option value=""> --select a card type--</option>
+                <!--here teh "visa"will go to the sarver and visa will seen by the user-->
+                <option value="visa">visa </option>
+                <option value="visa">master</option>
+                <option value="visa">classic</option>
+            </select>
+        </p>
+<p>Card number <input type="number" name="card_number" id="card_number"></p>
+<p>EXpiration DAtes: <input type="date" name="date" id="date"></p>
+<p> CVV <input type="password" name="cvv" id="cvv"></p>
+<input type="submit" value="pay now">
+
+
+
+
+
+
+    </form>
+</div>
+
+</body>
+
+</html>
